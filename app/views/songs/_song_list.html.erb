@@ -1,0 +1,8 @@
+<ul id="songs">
+  <% @songs.each do |song| %>
+    <li>
+      <%= link_to song.title, song_path(song), class: 'song_title' %>
+      <%= link_to "Delete", song_path(song), method: :delete %>
+    </li>
+  <% end %>
+</ul>

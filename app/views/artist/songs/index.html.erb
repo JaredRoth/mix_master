@@ -1,0 +1,9 @@
+<h1><%= @artist.name %>'s Songs</h1>
+<ul id="songs">
+  <% @songs.each do |song| %>
+    <li>
+      <%= link_to song.title, song_path(song), class: 'song_title' %>
+      <%= link_to "Delete", artist_song_path(@artist, song), method: :delete %>
+    </li>
+  <% end %>
+</ul>
