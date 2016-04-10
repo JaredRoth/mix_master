@@ -2,7 +2,11 @@
   <% @songs.each do |song| %>
     <li>
       <%= link_to song.title, song_path(song), class: 'song_title' %>
+      <% if current_page?('/songs')%>
       <%= link_to "Delete", song_path(song), method: :delete %>
+      <% else %>
+      <%= link_to "Delete", artist_song_path(@artist, song), method: :delete %>
+      <% end %>
     </li>
   <% end %>
 </ul>
