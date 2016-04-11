@@ -2,5 +2,5 @@
 <p><%= image_tag @artist.image_path %></p>
 <h4><%= link_to "View Songs",  artist_songs_path(@artist)%></h4>
 <p><%= link_to "Edit", edit_artist_path %></p>
-<p><%= link_to "Delete", artist_path(@artist), method: :delete %></p>
+<p><%= link_to "Delete", artist_path, method: :delete %></p>
 <p><%= link_to "New Song", new_artist_song_path(@artist) %></p>
